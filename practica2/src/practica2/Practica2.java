@@ -12,6 +12,7 @@ import java.util.*;
 public class Practica2 {
 
     /**
+     * 
      * @param args the command line arguments
      */
          public static void main(String[] args) {
@@ -22,9 +23,9 @@ public class Practica2 {
         String diasSemana[] = {"lunes", "martes", "miercoles","jueves", "viernes", "sabado", "domingo"};
         double suma=0;
         int dia,posMin, posMax;
-       
+       char seguir;
         sc.useLocale(Locale.ENGLISH);
-        
+        do{
         System.out.println("anota temperatura del dia");
         
         for (int i=0;i<temperaturas.length;i++){
@@ -44,6 +45,9 @@ public class Practica2 {
         
         System.out.println("la temperatura fue " + temperaturas[dia-1]);
     }
+            System.out.println("quieres seguir");
+            seguir=sc.nextLine().charAt(0);
+        }while(seguir == 's');
         }
     }
     
